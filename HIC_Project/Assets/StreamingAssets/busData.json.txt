@@ -1,0 +1,34 @@
+{
+    "busStops": [
+        {
+            "stopID": 1,
+            "name": "Main St",
+            "latitude": 50.0,
+            "longitude": -0.1
+        },
+        {
+            "stopID": 2,
+            "name": "Park Ave",
+            "latitude": 50.1,
+            "longitude": -0.2
+        },
+        {
+            "stopID": 3,
+            "name": "Elm Rd",
+            "latitude": 50.2,
+            "longitude": -0.3
+        }
+    ],
+    "busRoutes": [
+        {
+            "routeID": 1,
+            "routeName": "Route A",
+            "stops": [1, 2, 3]
+        },
+        {
+            "routeID": 2,
+            "routeName": "Route B",
+            "stops": [3, 2]
+        }
+    ]
+}
