@@ -1,3 +1,5 @@
+// Test script to display bus information in the Log.
+
 using UnityEngine;
 
 public class DisplayBusInfo : MonoBehaviour
