@@ -1,0 +1,56 @@
+{
+    "busStops": [
+        {
+            "stopID": 1,
+            "name": "Dix Stadium",
+            "address": "2213 Summit St",
+            "x": 100,
+            "y": -50
+        },
+        {
+            "stopID": 2,
+            "name": "Student Center",
+            "address": "1075 Risman Dr",
+            "x": -200,
+            "y": 100
+        },
+        {
+            "stopID": 3,
+            "name": "Summit East Parking Lot",
+            "address": "Summit East Lot",
+            "x": 50,
+            "y": -220
+        },
+        {
+            "stopID": 4,
+            "name": "Eastway Center",
+            "address": "17 Eastway Dr",
+            "x": -50,
+            "y": -75
+        },
+        {
+            "stopID": 5,
+            "name": "Tri-Towers",
+            "address": "Tri-Towers Rotunda",
+            "x": 175,
+            "y": 50
+        }
+    ],
+    "busRoutes": [
+        {
+            "routeID": 1,
+            "routeName": "Route 58",
+            "stops": [1, 3, 2]
+        },
+        {
+            "routeID": 2,
+            "routeName": "Route 59",
+            "stops": [1, 4, 5]
+        },
+        {
+            "routeID": 3,
+            "routeName": "Route 69",
+            "stops": [5, 2]
+        }
+    ]
+}
