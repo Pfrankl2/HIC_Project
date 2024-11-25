@@ -1,7 +1,5 @@
 // Non-Executable Script that defines all structures for holding
 // bus information to be used in other scripts.
-//
-// DOES NOT DEAL WITH ANY LOGIC!
 
 using System;
 

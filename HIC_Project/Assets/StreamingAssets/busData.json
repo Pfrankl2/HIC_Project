@@ -2,19 +2,19 @@
     "busStops": [
         {
             "stopID": 1,
-            "name": "Main St",
+            "name": "Dix Stadium",
             "latitude": 50.0,
             "longitude": -0.1
         },
         {
             "stopID": 2,
-            "name": "Park Ave",
+            "name": "Student Center",
             "latitude": 50.1,
             "longitude": -0.2
         },
         {
             "stopID": 3,
-            "name": "Elm Rd",
+            "name": "Bowman Hall",
             "latitude": 50.2,
             "longitude": -0.3
         }
@@ -22,12 +22,12 @@
     "busRoutes": [
         {
             "routeID": 1,
-            "routeName": "Route A",
+            "routeName": "Route 58",
             "stops": [1, 2, 3]
         },
         {
             "routeID": 2,
-            "routeName": "Route B",
+            "routeName": "Route 60",
             "stops": [3, 2]
         }
     ]
