@@ -9,8 +9,8 @@ public class BusStop
 {
     public int stopID;
     public string name;
-    public float latitude;
-    public float longitude;
+    public float x;
+    public float y;
 }
 
 // Class definition for Bus Route information.

@@ -13,7 +13,7 @@ public class DisplayBusInfo : MonoBehaviour
         // Loops through and prints each Bus Stop.
         foreach (var stop in dataLoader.busData.busStops)
         {
-            Debug.Log($"Stop Name: {stop.name}, Latitude: {stop.latitude}, Longitude: {stop.longitude}");
+            Debug.Log($"Stop Name: {stop.name}, Map X: {stop.x}, Map Y: {stop.y}");
         }
 
         // Loops through and prints each Bus Route.

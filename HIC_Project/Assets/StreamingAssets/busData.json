@@ -3,32 +3,32 @@
         {
             "stopID": 1,
             "name": "Dix Stadium",
-            "latitude": 50.0,
-            "longitude": -0.1
+            "x": 100,
+            "y": -50
         },
         {
             "stopID": 2,
             "name": "Student Center",
-            "latitude": 50.1,
-            "longitude": -0.2
+            "x": -200,
+            "y": 100
         },
         {
             "stopID": 3,
             "name": "Bowman Hall",
-            "latitude": 50.2,
-            "longitude": -0.3
+            "x": 50,
+            "y": -220
         },
         {
             "stopID": 4,
             "name": "Eastway Center",
-            "latitude": 50.4,
-            "longitude": -0.4
+            "x": -50,
+            "y": -75
         },
         {
             "stopID": 5,
             "name": "Tri-Towers",
-            "latitude": 50.5,
-            "longitude": -0.5
+            "x": 175,
+            "y": 50
         }
     ],
     "busRoutes": [
