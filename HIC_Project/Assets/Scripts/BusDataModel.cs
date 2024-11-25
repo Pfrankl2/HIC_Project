@@ -9,6 +9,7 @@ public class BusStop
 {
     public int stopID;
     public string name;
+    public string address;
     public float x;
     public float y;
 }
