@@ -17,16 +17,33 @@
             "name": "Bowman Hall",
             "latitude": 50.2,
             "longitude": -0.3
+        },
+        {
+            "stopID": 4,
+            "name": "Eastway Center",
+            "latitude": 50.4,
+            "longitude": -0.4
+        },
+        {
+            "stopID": 5,
+            "name": "Tri-Towers",
+            "latitude": 50.5,
+            "longitude": -0.5
         }
     ],
     "busRoutes": [
         {
             "routeID": 1,
+            "routeName": "Route 54",
+            "stops": [1, 3]
+        },
+        {
+            "routeID": 2,
             "routeName": "Route 58",
             "stops": [1, 2, 3]
         },
         {
-            "routeID": 2,
+            "routeID": 3,
             "routeName": "Route 60",
             "stops": [3, 2]
         }
