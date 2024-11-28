@@ -12,8 +12,6 @@ public class BusStop
     public string address;
     public float x;
     public float y;
-    // Add a "mapID" variable to define which map the bus stop
-    // should be displayed on (Main Campus / Dix Stadium).
 }
 
 // Class definition for Bus Route information.
