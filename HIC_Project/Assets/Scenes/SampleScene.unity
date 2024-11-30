@@ -2789,7 +2789,7 @@ GameObject:
   m_Component:
   - component: {fileID: 382286378}
   m_Layer: 5
-  m_Name: Bus Stops Page
+  m_Name: Bus Stops Page (Old)
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -2803,8 +2803,8 @@ RectTransform:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 382286377}
   m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
-  m_LocalPosition: {x: 0, y: 0, z: 0}
-  m_LocalScale: {x: 1.7424294, y: 1.7424294, z: 1.7424294}
+  m_LocalPosition: {x: 0, y: 0, z: 1.4599818}
+  m_LocalScale: {x: 0.47299188, y: 0.47299188, z: 0.47299188}
   m_ConstrainProportionsScale: 0
   m_Children:
   - {fileID: 1678070037}
@@ -2812,11 +2812,11 @@ RectTransform:
   - {fileID: 1746755044}
   - {fileID: 1264276689}
   - {fileID: 1408669318}
-  m_Father: {fileID: 603164629}
+  m_Father: {fileID: 1021641786}
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0.5, y: 0.5}
   m_AnchorMax: {x: 0.5, y: 0.5}
-  m_AnchoredPosition: {x: 3.7122, y: -553.13}
+  m_AnchoredPosition: {x: -104.03045, y: -72.8064}
   m_SizeDelta: {x: 100, y: 100}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!1 &402624762
@@ -2829,7 +2829,7 @@ GameObject:
   m_Component:
   - component: {fileID: 402624763}
   m_Layer: 5
-  m_Name: Bus Stops Page (Parker)
+  m_Name: Bus Stops Page
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -4769,7 +4769,6 @@ RectTransform:
   - {fileID: 610003170}
   - {fileID: 700683182}
   - {fileID: 573508037}
-  - {fileID: 382286378}
   - {fileID: 402624763}
   - {fileID: 176326101}
   - {fileID: 160166772}
@@ -7222,6 +7221,7 @@ Transform:
   m_ConstrainProportionsScale: 0
   m_Children:
   - {fileID: 1489817816}
+  - {fileID: 382286378}
   m_Father: {fileID: 0}
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!1 &1054767331
