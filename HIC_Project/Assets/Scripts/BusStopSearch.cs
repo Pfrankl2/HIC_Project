@@ -1,9 +1,9 @@
-// Script for searching a Bus Stop by name and showing its location
-// on the map!
+// Script for implementing general bus destination search bar that takes the user to the bus stop
+// they search for from other pages.
 
 using UnityEngine;
-using UnityEngine.UI;
 using TMPro;
+using UnityEngine.UI;
 
 public class BusStopSearch : MonoBehaviour
 {
@@ -15,53 +15,31 @@ public class BusStopSearch : MonoBehaviour
 
     void Start()
     {
-        searchButton.onClick.AddListener(SearchAndNavigate); // Calls "SearchAndNAvigate" when the search button is pressed.
+        searchButton.onClick.AddListener(SearchAndNavigate); // Assigns "SearchAndNavigate()" as a listener when "searchButton" is clicked.
     }
 
-    // Searches "busData.json" for the inputted name of a bus stop a user has entered.
+    // Searches for the bus stop input as a string of text by the user.
     void SearchAndNavigate()
     {
-        string searchQuery = searchInputField.text.Trim().ToLower();
+        string searchQuery = searchInputField.text.Trim().ToLower(); // Creates a string based on the input of the user in the search bar element (Turns to lower case).
 
-        // Searches each bus stop in "busData.json" to see if any of their names match "seachQuery".
-        BusStop foundStop = null;
+        BusStop foundStop = null; // Initializes a "BusStop" object to store the inputted stop.
         foreach (var stop in dataLoader.busData.busStops)
         {
-            if (stop.name.ToLower() == searchQuery) // If the inputted name matches a bus stop's name:
+            if (stop.name.ToLower() == searchQuery)
             {
-                foundStop = stop;
+                foundStop = stop; // Sets "foundStop" BusStop object to bus stop with the inputted string name.
                 break;
             }
         }
 
         if (foundStop != null)
         {
-            //NavigateToBusStop(foundStop);
-            Debug.Log($"Stop Name: {foundStop.name} | Stop Address: {foundStop.address}");
+            Debug.Log($"Bus Stop {foundStop.name} located!");
         }
         else
         {
             Debug.Log("Bus stop not found!");
         }
     }
-
-    /*
-    void NavigateToBusStop(BusStop stop)
-    {
-        // Move the map to center the found bus stop in the viewport
-        Vector2 stopPosition = new Vector2(stop.x, stop.y);
-
-        // Calculate the new map position to center the stop in the viewport
-        Vector2 viewportSize = viewportRectTransform.rect.size;
-        Vector2 mapSize = mapRectTransform.rect.size;
-
-        // Clamp the map position so it doesn't go out of bounds
-        float clampedX = Mathf.Clamp(-stopPosition.x + viewportSize.x / 2, -(mapSize.x - viewportSize.x), 0);
-        float clampedY = Mathf.Clamp(-stopPosition.y + viewportSize.y / 2, -(mapSize.y - viewportSize.y), 0);
-
-        mapRectTransform.anchoredPosition = new Vector2(clampedX, clampedY);
-
-        Debug.Log($"Navigated to bus stop: {stop.name}");
-    }
-    */
 }

@@ -20,15 +20,13 @@ public class BusStopMapper : MonoBehaviour
     {
         foreach (var busStop in dataLoader.busData.busStops)
         {
-            // Instantiates marker with the "Map Marker" GameObject and the map's Transform.
-            GameObject marker = Instantiate(markerPrefab, mapRectTransform);
+            GameObject marker = Instantiate(markerPrefab, mapRectTransform); // Instantiates marker with the "Map Marker" GameObject and the map's Transform.
 
             // Sets the Rect Transform of the Marker to place it within the map's Rect Transform.
             RectTransform markerRect = marker.GetComponent<RectTransform>();
             markerRect.anchoredPosition = new Vector2(busStop.x, busStop.y);
 
-            // Renames the marker to the name of the bus stop it is referencing.
-            marker.name = busStop.name;
+            marker.name = busStop.name; // Renames the marker to the name of the bus stop it is referencing.
         }
     }
 }
