@@ -18,8 +18,8 @@
             "stopID": 3,
             "name": "Summit East Parking Lot",
             "address": "Summit East Lot",
-            "x": 170,
-            "y": -170
+            "x": 173,
+            "y": -160
         },
         {
             "stopID": 4,
@@ -49,7 +49,7 @@
         },
         {
             "routeID": 3,
-            "routeName": "Route 69",
+            "routeName": "Route 60",
             "stops": [5, 2]
         }
     ]

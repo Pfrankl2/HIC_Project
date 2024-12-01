@@ -31,7 +31,7 @@ public class BusStopPage : MonoBehaviour
 
         dropdown.onValueChanged.AddListener(UpdateBusStopInfo); // Creates a listener that looks for when the index value of
                                                                 // the dropdown menu changes to call "UpdateBusStopInfo".
-        
+
         searchButton.onClick.AddListener(SearchAndSelectBusStop); // Creates a listener corresponding to the search button of
                                                                   // Home Page that updates the Bus Stops Page based on the inputted
                                                                   // bus stop of the user.
@@ -58,7 +58,7 @@ public class BusStopPage : MonoBehaviour
         if (busStopsDict.TryGetValue(index, out BusStop selectedStop)) // If the index currently selected is within "busStopsDict":
         {
             // Updates all TextMeshPro elements with bus stop information.
-            busStopNameText.text = $"Stop Name: {selectedStop.name}";
+            //busStopNameText.text = $"Stop Name: {selectedStop.name}";
             busStopIDText.text = $"Stop ID: {selectedStop.stopID}";
             busStopAddressText.text = $"Address: {selectedStop.address}";
         }
