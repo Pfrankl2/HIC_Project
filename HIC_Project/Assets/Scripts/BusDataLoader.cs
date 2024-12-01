@@ -11,7 +11,10 @@ using UnityEngine;
 public class BusDataLoader : MonoBehaviour
 {
     public BusData busData; // Stores arrays of "BusStop" and "BusRoute" objects to hold all general bus information.
-
+    void Start()
+    {
+        LoadBusData();
+    }
     public void LoadBusData()
     {
         string fileName = "busData.json"; // Defines the .json file to look for.
