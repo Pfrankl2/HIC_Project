@@ -11,7 +11,7 @@ using UnityEngine;
 public class BusDataLoader : MonoBehaviour
 {
     public BusData busData; // Stores arrays of "BusStop" and "BusRoute" objects to hold all general bus information.
-    void Awake()
+    void Start()
     {
         LoadBusData();
     }
