@@ -27,7 +27,7 @@ public class SettingsManager : MonoBehaviour
     private UserSettings userSettings;
     private string settingsFilePath;
 
-    void Start()
+    void Awake()
     {
         // Initialize settings file path
         settingsFilePath = Path.Combine(Application.streamingAssetsPath, "userSettings.json");
