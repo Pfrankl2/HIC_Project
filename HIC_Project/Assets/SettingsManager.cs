@@ -20,7 +20,9 @@ public class SettingsManager : MonoBehaviour
     [SerializeField]
     private Graphic[] darkModeElements; // Assign UI elements in the Inspector
     [SerializeField]
-    private Graphic[] darkModeBackgrounds;
+    private Graphic[] darkModeBackgrounds; 
+    [SerializeField]
+    private TMP_Text[] darkModeTextElements;
 
     private UserSettings userSettings;
     private string settingsFilePath;
@@ -121,17 +123,26 @@ public class SettingsManager : MonoBehaviour
 
     void ApplyDarkMode()
     {
-        Color color = userSettings.darkMode ? new Color32(60, 60, 60, 120) : new Color32(231, 209, 162, 255); // Hex codes: B8B8B8 and 000000
+        Color color = userSettings.darkMode ? new Color32(60, 60, 60, 120) : new Color32(231, 209, 162, 255);
 
+        // element/internal box color
         foreach (Graphic element in darkModeElements)
         {
             element.color = color;
         }
-        color = userSettings.darkMode ? new Color32(0, 0, 0, 255) : new Color32(231, 209, 162, 255); // Hex codes: B8B8B8 and 000000
-
+        color = userSettings.darkMode ? new Color32(0, 0, 0, 255) : new Color32(231, 209, 162, 255);
+        
+        // bg color
         foreach (Graphic element in darkModeBackgrounds)
         {
             element.color = color;
+        }
+        
+        // textColor
+        color = userSettings.darkMode ? new Color32(255, 255, 255, 255) : new Color32(0, 0, 0, 255);
+        foreach (TMP_Text textElement in darkModeTextElements)
+        {
+            textElement.color = color;
         }
     }
 
