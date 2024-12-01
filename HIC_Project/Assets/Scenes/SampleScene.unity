@@ -4512,6 +4512,7 @@ GameObject:
   serializedVersion: 6
   m_Component:
   - component: {fileID: 402624763}
+  - component: {fileID: 402624764}
   m_Layer: 5
   m_Name: Bus Stops Page
   m_TagString: Untagged
@@ -4550,6 +4551,27 @@ RectTransform:
   m_AnchoredPosition: {x: 3.7122, y: -553.13}
   m_SizeDelta: {x: 100, y: 100}
   m_Pivot: {x: 0.5, y: 0.5}
+--- !u!114 &402624764
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 402624762}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: ff107fecdfd97054aaa45ae82df7398c, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  dropdown: {fileID: 1187161455}
+  busStopNameText: {fileID: 1629416689}
+  busStopIDText: {fileID: 76095988}
+  busStopAddressText: {fileID: 2106339703}
+  searchBar: {fileID: 765203958}
+  searchButton: {fileID: 1941316723}
+  homePage: {fileID: 2005625966}
+  busStopsPage: {fileID: 402624762}
+  dataLoader: {fileID: 1209313571}
 --- !u!1 &403881871
 GameObject:
   m_ObjectHideFlags: 0
@@ -12937,8 +12959,8 @@ MonoBehaviour:
   - {fileID: 211826214}
   - {fileID: 403881873}
   - {fileID: 1810255686}
-  - {fileID: 586389028}
-  - {fileID: 1201731682}
+  - {fileID: 0}
+  - {fileID: 0}
   darkModeBackgrounds:
   - {fileID: 1111106608}
   darkModeTextElements:
@@ -12968,11 +12990,11 @@ MonoBehaviour:
   - {fileID: 1439070469}
   - {fileID: 1019289756}
   - {fileID: 1315111734}
-  - {fileID: 1629416689}
+  - {fileID: 0}
   - {fileID: 76095988}
   - {fileID: 2106339703}
-  - {fileID: 518843261}
-  - {fileID: 1888060747}
+  - {fileID: 0}
+  - {fileID: 0}
 --- !u!1 &1217656914
 GameObject:
   m_ObjectHideFlags: 0
@@ -17494,7 +17516,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   dropdown: {fileID: 1187161455}
-  busStopNameText: {fileID: 1629416689}
+  busStopNameText: {fileID: 0}
   busStopIDText: {fileID: 76095988}
   busStopAddressText: {fileID: 2106339703}
   searchBar: {fileID: 765203958}
