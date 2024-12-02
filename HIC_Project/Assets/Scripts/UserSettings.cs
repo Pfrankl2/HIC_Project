@@ -7,5 +7,6 @@ public class UserSettings
     public string lastName;
     public int homeStop;
     public bool darkMode;
-    public bool showAccessibleRoutes;
+    public bool showAccessibleRoutes; 
+    public int homeStopDropdownIndex;
 }
