@@ -2,6 +2,7 @@ using System.IO;
 using UnityEngine;
 using UnityEngine.UI;
 using TMPro;
+using System.Collections.Generic;
 
 public class SettingsManager : MonoBehaviour
 {
@@ -23,6 +24,8 @@ public class SettingsManager : MonoBehaviour
     private Graphic[] darkModeBackgrounds; 
     [SerializeField]
     private TMP_Text[] darkModeTextElements;
+    [SerializeField]
+    private Graphic[] darkModeDropdownBG;
 
     private UserSettings userSettings;
     private string settingsFilePath;
@@ -66,28 +69,21 @@ public class SettingsManager : MonoBehaviour
         darkModeToggle.isOn = userSettings.darkMode;
         showAccessibleRoutesToggle.isOn = userSettings.showAccessibleRoutes;
 
-        // Populate Home Stop dropdown
-        PopulateHomeStopDropdown();
 
         // Set selected home stop
         SetHomeStopDropdownValue();
-
+        if (userSettings.homeStopDropdownIndex >= 0 && userSettings.homeStopDropdownIndex < homeStopDropdown.options.Count)
+        {
+            homeStopDropdown.value = userSettings.homeStopDropdownIndex;
+        }
+        else
+        {
+            homeStopDropdown.value = 0; // Default to the first option if index is invalid
+        }
         // Apply Dark Mode settings
         ApplyDarkMode();
     }
 
-    void PopulateHomeStopDropdown()
-    {
-        homeStopDropdown.ClearOptions();
-        var options = new System.Collections.Generic.List<string>();
-
-        foreach (var stop in dataLoader.busData.busStops)
-        {
-            options.Add(stop.name);
-        }
-
-        homeStopDropdown.AddOptions(options);
-    }
 
     void SetHomeStopDropdownValue()
     {
@@ -111,6 +107,8 @@ public class SettingsManager : MonoBehaviour
         userSettings.darkMode = darkModeToggle.isOn;
         userSettings.showAccessibleRoutes = showAccessibleRoutesToggle.isOn;
         userSettings.homeStop = dataLoader.busData.busStops[homeStopDropdown.value].stopID;
+        userSettings.homeStopDropdownIndex = homeStopDropdown.value; 
+
 
         // Serialize to JSON and save
         string json = JsonUtility.ToJson(userSettings, true);
@@ -127,6 +125,13 @@ public class SettingsManager : MonoBehaviour
 
         // element/internal box color
         foreach (Graphic element in darkModeElements)
+        {
+            element.color = color;
+        }
+        color = userSettings.darkMode ? new Color32(60, 60, 60, 255) : new Color32(231, 209, 162, 255);
+
+        // element/internal box color
+        foreach (Graphic element in darkModeDropdownBG)
         {
             element.color = color;
         }
