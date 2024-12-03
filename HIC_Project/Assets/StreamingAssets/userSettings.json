@@ -2,7 +2,7 @@
     "firstName": "Parker",
     "lastName": "Best of the Best",
     "homeStop": 1,
-    "darkMode": true,
+    "darkMode": false,
     "showAccessibleRoutes": false,
     "homeStopDropdownIndex": 0
 }

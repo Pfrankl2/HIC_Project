@@ -69,8 +69,6 @@ public class SettingsManager : MonoBehaviour
         darkModeToggle.isOn = userSettings.darkMode;
         showAccessibleRoutesToggle.isOn = userSettings.showAccessibleRoutes;
 
-
-        // Set selected home stop
         SetHomeStopDropdownValue();
         if (userSettings.homeStopDropdownIndex >= 0 && userSettings.homeStopDropdownIndex < homeStopDropdown.options.Count)
         {
@@ -78,9 +76,8 @@ public class SettingsManager : MonoBehaviour
         }
         else
         {
-            homeStopDropdown.value = 0; // Default to the first option if index is invalid
+            homeStopDropdown.value = 0;
         }
-        // Apply Dark Mode settings
         ApplyDarkMode();
     }
 
@@ -114,14 +111,12 @@ public class SettingsManager : MonoBehaviour
         string json = JsonUtility.ToJson(userSettings, true);
         File.WriteAllText(settingsFilePath, json);
         Debug.Log("User settings saved.");
-
-        // Apply Dark Mode settings
         ApplyDarkMode();
     }
 
     void ApplyDarkMode()
     {
-        Color color = userSettings.darkMode ? new Color32(60, 60, 60, 120) : new Color32(231, 209, 162, 255);
+        Color color = userSettings.darkMode ? new Color32(60, 60, 60, 120) : new Color32(70, 70, 70, 60);
 
         // element/internal box color
         foreach (Graphic element in darkModeElements)
