@@ -1,4 +1,3 @@
-// FavoritesManager.cs
 using UnityEngine;
 using UnityEngine.UI;
 using TMPro;
@@ -21,7 +20,7 @@ public class FavoritesManager : MonoBehaviour
 
     public BusDataLoader dataLoader; // Reference to BusDataLoader
 
-    // Internal data
+
     private List<int> favoriteStopIDs = new List<int>(); // List to store favorite bus stop IDs
     private Dictionary<int, Toggle> stopToggles = new Dictionary<int, Toggle>(); // For toggles in Edit Mode
 
